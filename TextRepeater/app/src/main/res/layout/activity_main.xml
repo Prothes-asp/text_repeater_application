@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            >
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Number"
+                app:counterEnabled="true"
+                app:counterMaxLength="5"
+                app:hintTextColor="@color/success"
+                app:cursorColor="@color/success"
+                app:boxStrokeColor="@color/success"
+                app:counterTextColor="@color/success"
+                android:textColorHint="@color/blue"
+                android:id="@+id/inputLayout1"
+                app:endIconMode="clear_text"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/numberInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:text="108" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Emoji"
+                app:hintTextColor="@color/success"
+                app:cursorColor="@color/success"
+                app:boxStrokeColor="@color/success"
+                app:counterTextColor="@color/success"
+                android:textColorHint="@color/blue"
+                android:id="@+id/inputLayout3"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                >
+
+                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/emoji"
+                    android:id="@+id/autoComplete"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Your Repeated Text Here"
+            app:counterEnabled="true"
+            app:counterMaxLength="100"
+            app:hintTextColor="@color/success"
+            app:cursorColor="@color/success"
+            app:boxStrokeColor="@color/success"
+            app:counterTextColor="@color/success"
+            android:textColorHint="@color/blue"
+            android:layout_marginTop="10dp"
+            android:id="@+id/inputLayout2"
+            app:endIconMode="clear_text"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:maxLength="100"
+                android:id="@+id/textInput"
+                android:text="I Love You MA BABA"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="40dp"
+            >
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                >
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="New Line"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/blue"
+                            android:id="@+id/checkBox1"
+                            />
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Add Emoji"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/blue"
+                            android:id="@+id/checkBox2"
+                            />
+                    </LinearLayout>
+                </androidx.core.widget.NestedScrollView>
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Repeat Text"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:id="@+id/submitBtn"
+                android:background="@drawable/btn_ripple_effect"
+                android:textColor="@color/white"
+                android:layout_gravity="center_vertical"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:orientation="vertical"
+            android:background="@drawable/strock"
+            android:id="@+id/displayBox"
+            android:elevation="10dp"
+            >
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="320dp"
+                android:layout_margin="10dp"
+                android:fillViewport="false"
+                android:scrollbars="vertical"
+                >
+                <TextView
+                    android:id="@+id/display"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:scrollbars="vertical"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    />
+            </androidx.core.widget.NestedScrollView>
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/copyicons"
+                android:id="@+id/coptText"
+                android:layout_gravity="right"
+                android:layout_marginEnd="10dp"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:title="Search"
+        app:showAsAction="always"
+        android:id="@+id/searchMenu"
+        android:icon="@drawable/search"
+        app:actionViewClass="android.widget.SearchView"
+        />
+    <item
+        android:title="Share"
+        app:showAsAction="always"
+        android:id="@+id/shareMenu"
+        android:icon="@drawable/share"
+        />
+    <item
+        android:title="Privacy"
+        app:showAsAction="never"
+        android:id="@+id/privacyMenu"
+        />
+    <item
+        android:title="Setting"
+        app:showAsAction="never"
+        android:id="@+id/settingMenu"
+        />
+    <item
+        android:title="Exit"
+        app:showAsAction="never"
+        android:id="@+id/exitMenu"
+        />
+
+</menu>
